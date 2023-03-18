@@ -241,4 +241,8 @@ a {
     .googleBtn img {
         margin-left: 10px;
     }
+
+    .form__field:focus {
+        width: 280px;
+    }
 }
