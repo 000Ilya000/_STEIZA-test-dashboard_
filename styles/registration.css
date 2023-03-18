@@ -242,7 +242,7 @@ a {
         margin-left: 10px;
     }
 
-    .form__field:focus {
+    .form__field_data:focus {
         width: 280px;
     }
 }
