@@ -1,0 +1,244 @@
+html {
+    min-width: 380px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-family: 'Montserrat';
+}
+
+a {
+    text-decoration:none;
+    font-family: 'Montserrat';
+}
+
+/* задал фиксированную ширину контейнеру и поместил его по центру с помощью flex */
+
+.mainContainer {
+    width: 442px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainRegistration {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(118, 108, 232, 0.8);
+    border-radius: 8px;
+    margin-top: 42px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* линию заголовка сделал через after */
+
+.title::after {
+    content: '';
+    width: 280px;
+    color: #23222D;
+    border: 1.5px solid;
+    border-radius: 1px;
+    margin-top: 14px;
+    background-color: #23222D;
+}
+
+
+
+.form__group {
+    position: relative;
+    width: 384px;
+    display: flex;
+    margin-bottom: 14px;
+}
+
+/* оформление полей ввода основано на позиционировании label */
+  
+.form__field {
+    width: 100%;
+    border: 0px;
+    border-radius: 16px;
+    outline: 0;
+    padding-left: 24px;
+    padding-top: 28px;
+    padding-bottom: 8px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 24px;
+    color: #23222D;
+    background: transparent;
+    background-color: #FBFBFC;
+}
+
+.empty_field {
+    border: 1.5px solid #B43C3C;
+}
+
+/* скрытие изначального местоположения */
+
+.form__field::placeholder {
+    color: transparent;
+    font-family: 'Montserrat';
+}
+
+/* оформление label на центральном месте */
+
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 16px;
+    cursor: text;
+    top: 20px;
+    padding-left: 24px;
+}
+
+
+/* оформление основного label */
+
+.form__label {
+    position: absolute;
+    top: 3px;
+    display: block;
+    transition: 0.2s;
+    padding-left: 24px;
+    font-family: 'Montserrat';
+    line-height: 21px;
+    color: rgba(35, 34, 45, 0.6);
+}
+
+/* оформление label на верхнем месте */
+
+.form__field:focus ~ .form__label {
+    top: 3px;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    line-height: 21px;
+    color: #3E3978;
+}
+
+/* стили для полей ввода select */
+
+#dateOfBirth, #gender{
+    padding-right: 24px;
+}
+
+#gender, #city {
+    appearance: none;
+    cursor: pointer;
+}
+
+.password {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+/* основные стили для нижней части(кнопок) */
+
+.registrBtn {
+    font-size: 17px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 384px;
+    height: 56px;
+    background-color: #3E3978;
+    border-radius: 16px;
+    letter-spacing: 0.06em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 65px;
+    transition: 0.4s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.registrBtn:hover {
+    background-color: #322F54;
+    transition: 0.4s;
+}
+
+.registrBtn::after {
+    position: absolute;
+    content: '';
+    width: 200px;
+    color: #23222D;
+    border: 1.5px solid;
+    border-radius: 1px;
+    margin-top: 125px;
+    background-color: #23222D;
+}
+
+.googleBtn {
+    width: 384px;
+    height: 56px;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.googleBtn img {
+    position: absolute;
+    margin-left: 44px;
+}
+
+.googleBtn .mainGooglebtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.googleBtn a {
+    font-size: 16px;
+    line-height: 24px;
+    color: #23222D;
+    transition: 0.4s;
+}
+
+.googleBtn:hover a {
+    color: #3E3978;
+    transition: 0.4s;
+}
+
+/* адаптация */
+
+@media (max-width: 500px) { 
+    .mainContainer {
+        width: 340px;
+    }
+
+    .form__group, .registrBtn, .googleBtn {
+        width: 280px;
+    }
+
+    .googleBtn img {
+        margin-left: 10px;
+    }
+}

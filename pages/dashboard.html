@@ -1,0 +1,416 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- подключение стилей, шрифтов и тд -->
+    <link rel="stylesheet" href="/styles/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/images/favico.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- основной блок бокового меню -->
+    <div class="leftMenu">
+        <a href="#" class="hreflogo"><img class="logo" src="/images/Logo.svg" alt="logo"></a>
+        <!-- контейнер с кнопками основного меню -->
+        <div class="menu">
+            <!-- кнопки, прописанные через a с иконками -->
+            <a href="#Dashboard" class="butMenu">
+                <img src="/images/home_icon.svg" class="iconMenu" alt="home">
+                <p>Dashboard</p>
+            </a>
+
+            <a href="#Projects" class="butMenu">
+                <img src="/images/projects icon.svg" class="iconMenu" alt="home">
+                <p>Projects</p>
+            </a>
+
+            <a href="#Members" class="butMenu">
+                <img src="/images/Group.svg" class="iconMenu" alt="home">
+                <p>Members</p>
+            </a>
+
+            <a href="#Time Table" class="butMenu">
+                <img src="/images/time icon.svg" class="iconMenu" alt="home">
+                <p>Time Table</p>
+            </a>
+
+            <a href="#Contacts" class="butMenu">
+                <img src="/images/phone icon.svg" class="iconMenu" alt="home">
+                <p>Contacts</p>
+            </a>
+
+            <a href="#Support" class="butMenu">
+                <img src="/images/1678709569854 1.svg" class="iconMenu" alt="home">
+                <p>Support</p>
+            </a>
+        </div>
+    </div>
+    <!-- основной блок шапки, у которого стоит нижний border -->
+    <div class="header">
+        <!-- блок шапки с главным контентом -->
+        <div class="headerContent">
+            <input type="search" placeholder="Search here..">
+            <!-- блок с профилем -->
+            <div class="profile">
+                <div class="name">
+                    <p class="user">Mark Lane</p>
+                    <p class="user">Admin</p>
+                </div>
+                <a href="registration.html"><img src="/images/Profile.svg" alt="profile"></a>
+            </div>
+        </div>
+    </div>
+    <div class="MainheaderMenu">
+        <div class="menu headerMenu">
+            <!-- кнопки, прописанные через a с иконками -->
+            <a href="#Dashboard" class="butMenu">
+                <img src="/images/home_icon.svg" class="iconMenu" alt="home">
+                <p>Dashboard</p>
+            </a>
+
+            <a href="#Projects" class="butMenu">
+                <img src="/images/projects icon.svg" class="iconMenu" alt="home">
+                <p>Projects</p>
+            </a>
+
+            <a href="#Members" class="butMenu">
+                <img src="/images/Group.svg" class="iconMenu" alt="home">
+                <p>Members</p>
+            </a>
+
+            <a href="#Time Table" class="butMenu">
+                <img src="/images/time icon.svg" class="iconMenu" alt="home">
+                <p>Time Table</p>
+            </a>
+
+            <a href="#Contacts" class="butMenu">
+                <img src="/images/phone icon.svg" class="iconMenu" alt="home">
+                <p>Contacts</p>
+            </a>
+
+            <a href="#Support" class="butMenu">
+                <img src="/images/1678709569854 1.svg" class="iconMenu" alt="home">
+                <p>Support</p>
+            </a>
+        </div>
+    </div>
+    <!-- главная часть содержащая главную информацию -->
+    <div class="mainPart">
+        <!-- блок - топ продаж -->
+        <div class="topSeller">
+            <p class="title">Top seller</p>
+            <!-- три основные карточки -->
+            <div class="mainCards">
+                <div class="mainCard">
+                    <p class="place">1</p>
+                    <div class="card">
+                        <img src="/images/cardImg_1.svg" alt="cardimg">
+                        <p class="cardName">Gear IconX</p>
+                        <p class="cardDiscr">Amazing headphones</p>
+                    </div>
+                    <p class="sales first_sales">over 100,000 sales</p>
+                </div>
+                <div class="mainCard">
+                    <p class="place">2</p>
+                    <div class="card next_cards">
+                        <img src="/images/cardimg 2.svg" alt="cardimg">
+                        <div class="p_next_cards">
+                            <p class="cardName next_card">Bose Headphones 700</p>
+                            <p class="cardDiscr next_card">$370.00</p>
+                        </div>
+                    </div>
+                    <p class="sales">80,000 sales</p>
+                </div>
+                <div class="mainCard">
+                    <p class="place">3</p>
+                    <div class="card next_cards">
+                        <img src="/images/cardimg 3.svg" class="last_card_img" alt="cardimg">
+                        <div class="p_next_cards">
+                            <p class="cardName next_card">Amazon Bip Home</p>
+                            <p class="cardDiscr next_card">$370.00</p>
+                        </div>
+                    </div>
+                    <p class="sales">65,000 sales</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- блок sale report и Yearly sales -->
+        <div class="sale_report-yearly_sales">
+            <!-- блок sale_report -->
+            <div class="sale_report">
+                <!-- заголовок и график -->
+                <div class="graphAndtitle">
+                    <p class="report_title">Sales Report (September)</p>
+
+                    <!-- график, сделанный с помощью chart.js -->
+                    <div class="graph">
+                        <!-- основной блок графика -->
+                        <canvas id="myChart"></canvas>
+                        <!-- подключение chart.js -->
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <!-- основной скрипт графика -->
+                        <script>
+                            const ctx = document.getElementById('myChart');
+                          
+                            new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 8', 'Day 9', 'Day 10'],
+                                    datasets: [
+                                        {
+                                        label: 'Sales Report',
+                                        data: [98, 87, 60, 63, 70, 48, 36, 68, 57, 77],
+                                        backgroundColor: ["#3E3978"],
+                                        categoryPercentage: 0.6,
+                                        barPercentage: 0.5,
+                                        borderRadius: Number.MAX_VALUE,  
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <!-- колонка - детали -->
+                <div class="details">
+                    <!-- заголовок и 3 карточки -->
+                    <p class="title_details">Details</p>
+                    <div class="detailCard">
+                        <p class="detailCardTitle">TOTAL SALES</p>
+                        <p class="detailCardCont">15,280.00</p>
+                    </div>
+                    <div class="detailCard centerDetailCard">
+                        <p class="detailCardTitle">TOTAL REFUNDS</p>
+                        <p class="detailCardCont">17.00</p>
+                    </div>
+                    <div class="detailCard">
+                        <p class="detailCardTitle">TOTAL INCOME</p>
+                        <p class="detailCardCont">$25,180.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- блок yearly_sales -->
+            <div class="yearly_sales">
+                <!-- заголовок и 4 package -->
+                <p class="yearly_sales_title">Yearly sales</p>
+                <!-- package, состоящие из svg, заголовка, ссылки на подробную информацию и суммы -->
+                <div class="package">
+                
+                    <img src="/images/sales-icon-10 1.svg" alt="package">
+                    <div class="descrPackage">
+                        <p class="title-Package">Package 1</p>
+                        <a href="#">Click here details</a>
+                    </div>
+                    <p class="sum">$12.00</p>
+                </div>
+                <div class="package">
+                    <img src="/images/sales-icon-10 1.svg" alt="package">
+                    <div class="descrPackage">
+                        <p class="title-Package">Package 2</p>
+                        <a href="#">Click here details</a>
+                    </div>
+                    <p class="sum">$15.00</p>
+                </div>
+                <div class="package">
+                    <img src="/images/sales-icon-10 1.svg" alt="package">
+                    <div class="descrPackage">
+                        <p class="title-Package">Package 3</p>
+                        <a href="#">Click here details</a>
+                    </div>
+                    <p class="sum">$18.00</p>
+                </div>
+                <div class="package">
+                    <img src="/images/sales-icon-10 1.svg" alt="package">
+                    <div class="descrPackage">
+                        <p class="title-Package">Package 4</p>
+                        <a href="#">Click here details</a>
+                    </div>
+                    <p class="sum">$22.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- блок total Members и Messages -->
+        <div class="totalMembers-Messages">
+            <!-- блок totalMembers -->
+            <div class="totalMembers">
+                <!-- отцентрированный контент, с отступами  -->
+                <div class="totalMembersContent">
+                    <!-- 3 строчных контента c заголовками и svg -->
+                    <div class="totMembrLastThisYear">
+                        <p>TOTAL <br> MEMBERS</p>
+                        <div class="lastYear">
+                            <img src="/images/green arrow.svg" alt="">
+                            <p>LAST YEAR <br> 1,457,121</p>
+                        </div>
+                        <p class="last_p_totalMembers">THIS YEAR <br> 1,925,024</p>
+                    </div>
+                    <div class="totMembrLastThisYear totMembrLastThisYear-centr">
+                        <p>TOTAL <br> MEMBERS</p>
+                        <div class="lastYear">
+                            <img src="/images/red arrow.svg" alt="">
+                            <p>LAST YEAR <br> 1,457,121</p>
+                        </div>
+                        <p class="last_p_totalMembers">THIS YEAR <br> 1,925,024</p>
+                    </div>
+                    <div class="totMembrLastThisYear">
+                        <p>TOTAL <br> MEMBERS</p>
+                        <div class="lastYear">
+                            <img src="/images/green arrow.svg" alt="">
+                            <p>LAST YEAR <br> 1,457,121</p>
+                        </div>
+                        <p class="last_p_totalMembers">THIS YEAR <br> 1,925,024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- блок messages -->
+            <div class="messages">
+                <!-- код взял с блока Yearly sales, что бы взять его стили и немного поменял его  -->
+                <p class="yearly_sales_title">Messages</p>
+                <div class="messagesPackage package">
+                    <div class="descrPackage">
+                        <p class="title-Package">Steve Smith</p>
+                        <a href="#">Click here details</a>
+                    </div>
+                    <!-- поменял расположение svg, сделал ее ссылкой и убрал sum -->
+                    <a href="#"><img src="/images/Ellipse man1.svg" alt="package"></a>
+                </div>
+                <div class="messagesPackage package">
+                    <div class="descrPackage">
+                        <p class="title-Package">Johnson Waugh </p>
+                        <a href="#">Click here details</a>
+                    </div>
+                    <a href="#"><img src="/images/Ellipse man2.svg" alt="package"></a>
+                </div>
+                <div class="messagesPackage package">
+                    <div class="descrPackage">
+                        <p class="title-Package">Michael Williams</p>
+                        <a href="#">Click here details</a>
+                    </div>
+                    <a href="#"><img src="/images/Ellipse man3.svg" alt="package"></a>
+                </div>
+                <!-- код взял с блока Yearly sales, что бы взять его стили и немного поменял его  -->
+            </div>
+        </div>
+
+        <!-- блок lastSales и topSeller -->
+        <div class="lastSales_topSeller">
+            <!-- блок lastSales -->
+            <div class="lastSales">
+                <!-- заголовки и график -->
+                <div class="titlesAndGraph">
+                    <!-- заголовки - flex -->
+                    <div class="lastSalesTitiles">
+                        <p>Timeline</p>
+                        <p>Last sales</p>
+                    </div>
+                    <!-- линейный график -->
+                    <div class="graphlin">
+                        <!-- основной блок графика -->
+                        <canvas id="myChart1"></canvas>
+
+                        <!-- основной скрипт графика -->
+                        <script>
+                            const ctxLine = document.getElementById('myChart1');
+                        
+                            new Chart(ctxLine, {
+                                data: {
+                                datasets:[{
+                                        type: 'line',
+                                        label: 'Last 6 days',
+                                        data: [1.1, 0.7, 1, 1.6, 2, 2.5],
+                                        backgroundColor: ["#37C61F"],
+                                        fill: false,
+                                        borderColor: '#37C61F',
+                                        tension: 0.1,
+                                    },
+                                    {
+                                        type: 'line',
+                                        label: 'Last month',
+                                        data: [1.4, 2, 0.5, 1, 1.8, 1.6],
+                                        backgroundColor: ["#3E3978"],
+                                        fill: false,
+                                        borderColor: '#766CE8',
+                                        tension: 0.1,
+                                    }],
+                                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                                },
+                                options: {
+                                    responsive: false,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- блок topSeller -->
+            <div class="lastTopSeller">
+                <!-- Заголовок с других похожих блоков  -->
+                <p class="yearly_sales_title doughnutTitle">Top seller</p>
+                <!-- график - pie-chart -->
+                <div class="graphDoughnut">
+                    <!-- основной блок графика -->
+                    <canvas id="myChart2"></canvas>
+                    <!-- основной скрипт графика -->
+                    <script>
+                        const ctxDoughnut = document.getElementById('myChart2');
+                    
+                        new Chart(ctxDoughnut, {
+                            type: 'doughnut',
+                                data: {
+                                    labels: ['Gear IconX', 'Bose Headphones', 'Amazon Bip Home'],
+                                    datasets: [
+                                        {
+                                        label: 'Sales',
+                                        data: [100000, 80000, 65000],
+                                        categoryPercentage: 0.6,
+                                        barPercentage: 0.5,
+                                        backgroundColor: [
+                                            'rgba(35, 34, 45, 0.9)',
+                                            'rgba(62, 57, 120, 1)',
+                                            'rgba(118, 108, 232, 0.8)'
+                                        ],
+                                        hoverOffset: 10,
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer header">
+        <a href="#" class="hrefFooterLogo"><img class="footerLogo" src="/images/Logo.svg" alt="logo"></a>
+    </div>
+</body>
+</html>

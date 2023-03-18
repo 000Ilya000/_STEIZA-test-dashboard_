@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/styles/registration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/images/favico.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
+    <!-- <script src="/scripts/main.js"></script> -->
+    <!-- Подключение библиотеки jQuery -->
+    <script src="/scripts/jquery.js"></script>
+    <!-- Подключение jQuery плагина Masked Input -->
+    <script src="/scripts/jquery.maskedinput.min.js"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <img src="/images/Logo.svg" alt="logo">
+        <div class="mainRegistration">
+            <p class="title">Registration</p>
+
+            <!-- Написал 7 инпутов и 2 селекта  -->
+
+            <form action="http://127.0.0.1:5500/pages/dashboard.html" class="form_box">
+                <div class="form__group field">
+                    <input type="text" class="form__field name_form" placeholder="Name" name="name" id='name' maxlength="10" minlength="2" required />
+                    <label for="name" class="form__label">Name</label>
+                </div>
+                <div class="form__group field">
+                    <input type="text" class="form__field" placeholder="Surname" name="surname" maxlength="20" id='surname' required />
+                    <label for="surname" class="form__label">Surname</label>
+                </div>
+                <div class="form__group field">
+                    <input type="e-mail" class="form__field" placeholder="E-mail" name="e-mail" maxlength="25" id='e-mail' required />
+                    <script>
+                        //Код jQuery, установливающий маску для ввода телефона элементу input
+                        //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+                        $(function(){
+                          //2. Получить элемент, к которому необходимо добавить маску
+                          $("#e-mail").mask("****-*********@******.**");
+                        });
+                    </script>
+                    <label for="e-mail" class="form__label">E-mail</label>
+                </div>
+                <div class="form__group field">
+                    <input type="tel" class="form__field" placeholder="Telephone" name="telephone" id='telephone' required />
+                    <script>
+                        //Код jQuery, установливающий маску для ввода телефона элементу input
+                        //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+                        $(function(){
+                          //2. Получить элемент, к которому необходимо добавить маску
+                          $("#telephone").mask("+7 (999) 999-99-99");
+                        });
+                    </script>
+                    <label for="telephone" class="form__label">Telephone</label>
+                </div>
+                <div class="form__group field">
+    
+                    <!-- Выбор города так же сделал через селект(выпадающий список) -->
+    
+                    <label for="сity" class="form__label">City ▼</label>
+                    <select name="сity" type="сity" class="form__field" placeholder="Yor city" maxlength="25" name="city" required id="city">
+                        <option value="1">Abidjan</option>
+                        <option value="2">Adana</option>
+                        <option value="3">Addis Ababa</option>
+                        <option value="4">Adelaide</option>
+                        <option value="5">Accra</option>
+                        <option value="6">Baghdad</option>
+                        <option value="7">Basel</option>
+                        <option value="8" selected>Moscow</option>
+                        <option value="9">Minsk</option>
+                        <option value="10">Narva</option>
+                        <option value="11">Osaka</option>
+                    </select>
+                </div>
+                <div class="form__group field">
+                    <input type="date" class="form__field" placeholder="Date of Birth" name="dateOfBirth" id='dateOfBirth' required />
+                    <label for="dateOfBirth" class="form__label">Date of Birth</label>
+                </div>
+                <div class="form__group field">
+    
+                    <!-- написал код для пола(через селект) -->
+    
+                    <label for="gender" class="form__label">Gender ▼</label>
+                    <select name="genders" type="gender" class="form__field" placeholder="Choose your gender" name="gender" id='gender' required id="gender">
+                        <option value="man" selected>man</option>
+                        <option value="woman">woman</option>
+                    </select>
+                </div>
+                <div class="form__group field">
+    
+                    <!-- стандарный тип password -->
+    
+                    <input type="password" class="form__field password" placeholder="Password" name="password" maxlength="25" id='password' required />
+                    <label for="password" class="form__label">Password</label>
+                </div>
+                <div class="form__group field">
+                    <input type="password" class="form__field password" placeholder="Confirm the password" name="ConfirmThePassword" maxlength="25" id='ConfirmThePassword' required />
+                    <label for="ConfirmThePassword" class="form__label">Confirm the password</label>
+                </div>
+    
+                <!-- главная кнопка сделана через button и button:after -->
+    
+                <button type="submit" id="button" value="register" class="registrBtn">register</button>
+
+                <!-- прописал скрипт для проверки заполнения форм -->
+
+                <script type="text/javascript">
+                    $('document').ready(function() {
+                      $('#button').on('click', function() {
+                        $('.form_box .form__field').each(function() {
+                          if ($(this).val() != '') {
+                            console.log(32);
+                            // Если поле не пустое удаляем класс-указание
+                            $(this).removeClass('empty_field');
+                          } else {
+                            console.log(33);
+                            // Если поле пустое добавляем класс-указание
+                            $(this).addClass('empty_field');
+                          }
+                        });
+                      });
+                    });
+                </script>
+
+            </form>
+
+            <!-- Google кнопку занес в отдельный контейнер, что бы нормально отпазиционировать иконку -->
+            <div class="googleBtn">
+                <img src="/images//google.svg" alt="google">
+                <div class="mainGooglebtn">
+                    <a href="#1">Continue with Google</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

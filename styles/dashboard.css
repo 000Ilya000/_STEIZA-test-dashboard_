@@ -1,0 +1,1240 @@
+html {
+    min-width: 400px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Montserrat';
+}
+
+a {
+    text-decoration:none;
+    font-family: 'Montserrat';
+}
+
+/* скрываем верхнее меню */
+
+.MainheaderMenu {
+    display: none;
+}
+
+/* оформление левого меню */
+
+.leftMenu {
+    width: 340px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgba(118, 108, 232, 0.8);
+    height: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    position: fixed;
+    z-index: 1;
+}
+
+.leftMenu .logo {
+    padding-top: 80px;
+    max-width: 276px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 100%;
+    align-items: center;
+}
+
+.menu a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #23222D;
+}
+
+/* оформление кнопок меню */
+
+.butMenu {
+    height: 56px;
+    border-radius: 16px;
+    width: 92%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    transition: 0.2s;
+}
+
+.butMenu:hover {
+    background: rgba(118, 108, 232, 0.25);
+    transition: 0.2s;
+}
+
+.iconMenu {
+    padding-left: 32px;
+    padding-right: 16px;
+}
+
+/* оформление хедера */
+
+.header {
+    height: 80px;
+    margin-left: 340px;
+    border-bottom: 1px solid rgba(118, 108, 232, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContent {
+    display: flex;
+    width: 980px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header input {
+    height: 30px;
+    width: 280px;
+    border-radius: 16px;
+    border: 1.5px solid rgba(118, 108, 232, 0.8);
+    padding-left: 26px;
+    font-family: 'Montserrat';
+    outline: none;
+}
+
+.header input:focus {
+    border: 1.5px solid #3E3978;
+}
+
+/* (замена цвета у placeholder и удаление стандартного крестика) */
+
+.header input::-moz-placeholder { color: rgba(118, 108, 232, 0.8);}
+.header input::-webkit-input-placeholder { color: rgba(118, 108, 232, 0.8);}
+.header input::-webkit-search-decoration,
+.header input::-webkit-search-cancel-button,
+.header input::-webkit-search-results-button,
+.header input::-webkit-search-results-decoration { display: none; }
+
+/* оформление профиля */
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile p:first-child {
+    color: #23222D;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.name {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 16px;
+}
+
+.user {
+    margin: 0px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #3E3978;
+    width: fit-content;
+}
+
+/* основные стили главной части */
+
+.mainPart {
+    display: flex;
+    margin-left: 340px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* стили для блока - топ продаж */
+
+.topSeller {
+    width: 980px;
+    height: fit-content;
+    margin-top: 26px;
+}
+
+/* основные стили для карточек  */
+
+.card {
+    width: 280px;
+    height: 360px;
+    background-color:  rgba(107, 105, 131, 0.15);
+    border: 1.5px solid rgba(107, 105, 131, 0.15);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.mainCards {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* обводка при наведении */
+
+.card:hover {
+    border: 1.5px solid #3E3978;
+    transition: 0.2s;
+}
+
+
+/* отступы для картинок */
+
+.card img {
+    margin-top: 50px;
+    max-width: 100%;
+}
+
+/* стили для заголовков */
+
+.cardName {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #3E3978;
+    margin-bottom: 0;
+}
+
+/* описание карточек */
+
+.cardDiscr, .sales {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #23222D;
+    margin-top: 4px;
+}
+
+.first_sales {
+    font-weight: 600;
+}
+
+/* стили для карточек на 2м и 3м месте */
+
+.next_card {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.next_cards {
+    height: 330px;
+}
+
+.p_next_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card .last_card_img {
+    margin-top: 24px;
+}
+
+/* стили для заголовка */
+
+.title {
+    position: absolute;
+    font-size: 26px;
+    line-height: 39px;
+    color: #23222D;
+}
+
+/* стили для места(1,2, 3) */
+
+.place {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 26px;
+    line-height: 39px;
+    text-align: center;
+    color: #3E3978;
+}
+
+.sales {
+    margin-top: 26px;
+}
+
+/* общие стили для осальныхх блоков */
+
+.sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+    width: 980px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+}
+
+/* стили для блока sale_report */
+
+.sale_report {
+    border: 1.5px solid #3E3978;
+    border-radius: 16px;
+    width: 620px;
+    display: flex;
+}
+
+.graphAndtitle {
+    margin-left: 16px;
+}
+
+/* стили для заголовка */
+
+.graphAndtitle p {
+    font-size: 26px;
+    line-height: 39px;
+    color: #23222D;
+    margin-bottom: 60px;
+}
+
+/* стили для карточек - детали */
+
+.title_details {
+    font-size: 18px;
+    line-height: 27px;
+    color: #23222D;
+    margin-top: 26px;
+    margin-bottom: 10px;
+}
+
+.details {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.detailCard {
+    height: 72px;
+    background-color: rgba(118, 108, 232, 0.15);
+    border: 1.5px solid rgba(118, 108, 232, 0.15);
+    width: 126px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    transition: 0.2s;
+}
+
+/* немного анимации при наведении */
+
+.detailCard:hover {
+    background-color: rgba(118, 108, 232, 0.2);
+    border: 1.5px solid #3E3978;
+    transition: 0.2s;
+}
+
+.detailCardCont {
+    font-weight: 600;
+    font-size: 12;
+    line-height: 20px;
+    color: #3E3978;
+    margin-top: 0;  
+    margin-left: 10px;
+}
+
+.detailCardTitle {
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 12px;
+    color: #3E3978;
+    margin-bottom: 12px;
+    margin-left: 10px;
+}
+
+/* высота для графика */
+
+.graph {
+    height: 220px;
+}
+
+canvas {
+    height: 100%;
+}
+
+/* общие стили для yearly_sales и messages */
+
+.yearly_sales, .messages, .lastTopSeller {
+    border: 1.5px solid #3E3978;
+    border-radius: 16px;
+    min-width: 304px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* оформление заголовка и линии через after */
+
+.yearly_sales_title {
+    font-size: 26px;
+    line-height: 39px;
+    color: #23222D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yearly_sales_title::after {
+    width: 276px;
+    border: 1px solid rgba(118, 108, 232, 0.2);
+    background-color: rgba(118, 108, 232, 0.2);
+    content: '';
+    border-radius: 6px;
+}
+
+/* стили для package */
+
+.package {
+    display: flex;
+    height: 46px;
+    align-items: center;
+    margin-bottom: 28px;
+    justify-content: center;
+}
+
+.sum {
+    margin-left: 30px;
+}
+
+.descrPackage a {
+    font-size: 12px;
+    line-height: 19px;
+    color: #4F17C6;
+}
+
+.descrPackage {
+    margin-left: 17px;
+    margin-right: 20px;
+}
+
+/* стили для заголовков в package */
+
+.package p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 25px;
+    color: #3E3978;
+}
+
+/* общие стили для блока totalMembers */
+
+.totalMembers, .lastSales {
+    border: 1.5px solid #3E3978;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 620px;
+}
+
+/* отцентрирование контента */
+
+.totalMembersContent {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 25px 16px 32px;
+}
+
+/* отступы */
+
+.totMembrLastThisYear-centr {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+/* стили для заголовков */
+
+.totalMembersContent p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #3E3978;
+}
+
+.last_p_totalMembers {
+    text-align: center;
+}
+
+/* отцентрирование */
+
+.totMembrLastThisYear {
+    display: flex;
+    align-items: center;
+}
+
+/* отступы от центральной колонки */
+
+.lastYear {
+    display: flex;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.lastYear img {
+    margin-right: 18px;
+}
+
+.messagesPackage {
+    justify-content: space-between;
+}
+
+/* отступ для картинок в messages */
+
+.messagesPackage img {
+    padding-right: 17px;
+}
+
+/* нижний отступ для последнего блока */
+
+.lastSales_topSeller {
+    margin-bottom: 40px;
+}
+
+/* flex стили для блока заголовков у блока lastSales */
+
+.lastSalesTitiles{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* стили для самих заголовков */
+
+.lastSalesTitiles p {
+    font-size: 26px;
+    line-height: 39px;
+    letter-spacing: 0.6;
+    color: #23222D;
+}
+
+/* размеры графика */
+
+.graphlin{
+    height: 270px;
+    margin-bottom: 16px;
+}
+
+/* позиционирование и размеры pie-chart */
+
+.graphDoughnut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+/* убираем нижний отступ для заголовка */
+
+.doughnutTitle {
+    margin-bottom: 0;
+}
+
+/* задаем отступы для графика pie-chart */
+
+.graphDoughnut canvas {
+    padding: 17px;
+}
+
+/* стили для футера с лого */
+
+.footer {
+    display: flex;
+    border-top: 1px solid rgba(118, 108, 232, 0.8);
+    height: 80px;
+    border-bottom: 0px;
+}
+
+.footer a {
+    display: flex;
+    justify-content: center;
+}
+
+.footer img{
+    width: 70%;
+}
+
+/* адаптация */
+
+/* @media (max-width: 1350px) { 
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 880px;
+    }
+
+    .sale_report {
+        flex-direction: column;
+    }
+
+    .sale_report, .totalMembers, .lastSales {
+        max-width: 554px;
+        min-width: 554px;
+    }
+
+    .graphAndtitle p {
+        margin-bottom: 17px;
+    }
+
+    .report_title {
+        text-align: center;
+    }
+
+    .details {
+        justify-content: center;
+        display: flex;
+    }
+
+    .title_details {
+        padding-right: 17px;
+    }
+
+    .centerDetailCard {
+        margin-left: 17px;
+        margin-right: 17px;
+    }
+
+    .graph {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 17px;
+    }
+
+    .totalMembersContent p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1270px) { 
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 780px;
+    }
+
+    .card {
+        width: 248px;
+    }   
+
+    .sale_report, .totalMembers, .lastSales {
+        max-width: 454px;
+        min-width: 454px;
+    }
+
+    .graphAndtitle  {
+        margin-right: 16px;
+    }
+
+    .totalMembersContent p {
+        font-size: 14px;
+    }
+
+    .lastYear {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .graphlin {
+        height: 210px;
+    }
+
+    .lastSalesTitiles p {
+        margin-top: 0;
+        margin-bottom: 48px;
+    }
+}
+
+@media (max-width: 1150px) { 
+    .leftMenu {
+        width: 260px;
+        justify-content: space-around;
+    }
+
+    .header {
+        margin-left: 260px;
+    }
+
+    .menu {
+        margin-top: 0;
+    }
+
+    .mainPart {
+        margin-left: 260px;
+    }
+
+    .hreflogo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hreflogo .logo {
+        width: 80%;
+        padding-top: 0;
+    }
+}   
+
+@media (max-width: 1070px) { 
+    .leftMenu {
+        width: 220px;
+    }
+
+    .header {
+        margin-left: 220px;
+    }
+
+    .mainPart {
+        margin-left: 220px;
+    }
+
+    .hreflogo .logo {
+        padding-top: 40px;
+    }
+}   
+
+@media (max-width: 1020px) { 
+
+    .leftMenu {
+        width: 280px;
+    }
+
+    .header {
+        margin-left: 280px;
+    }
+
+    .mainPart {
+        margin-left: 280px;
+    }
+
+    .menu p {
+        font-size: 16px;
+    }
+
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 600px;
+    }
+
+    .topSeller {
+        flex-direction: column;
+    } 
+
+    .title {
+        position: relative;
+        text-align: center;
+    }
+
+    .mainCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sale_report, .totalMembers, .lastSales {
+        margin-bottom: 60px;
+    }
+
+    .mainCards {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+} 
+
+@media (max-width: 900px) { 
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 460px;
+    }
+}
+
+@media (max-width: 768px) { 
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 350px;
+    }
+
+    .header input {
+        width: 180px;
+    }
+
+    .sale_report, .totalMembers, .lastSales {
+        max-width: 320px;
+        min-width: 320px;
+    }
+
+    .graph {
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    .details {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .title_details {
+        padding-right: 0;
+    }
+
+    .detailCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .detailCard p {
+        margin: 0;
+    }
+
+    .totalMembersContent p {
+        font-size: 12px;
+    }
+
+    .lastYear {
+        margin-left: 20px;
+        margin-right: 20px;
+    } 
+
+    .totalMembersContent {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .graphlin {
+        height: 150px;
+    }
+
+    .lastSalesTitiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lastSalesTitiles p {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 640px) { 
+    .leftMenu {
+        width: 160px;
+    }
+
+    .header {
+        margin-left: 160px;
+    }
+
+    .mainPart {
+        margin-left: 160px;
+    }
+
+    .iconMenu {
+        padding-left: 10px;
+    }
+
+    .footer img{
+        width: 50%;
+    }
+} 
+
+@media (max-width: 518px) { 
+    .butMenu p {
+        display: none;
+    }
+
+    .butMenu {
+        justify-content: center;
+    }
+
+    .leftMenu {
+        width: 100px;
+    }
+
+    .header {
+        margin-left: 100px;
+    }
+
+    .mainPart {
+        margin-left: 100px;
+    }
+
+    .iconMenu {
+        width: 30%;
+    }
+
+    .hreflogo {
+        display: none;
+    }
+} 
+
+@media (max-width: 460px) { 
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 278px;
+    }
+
+    .header input {
+        width: 140px;
+    }
+
+    .sale_report, .totalMembers, .lastSales, .yearly_sales, .messages, .lastTopSeller {
+        max-width: 278px;
+        min-width: 278px;
+    }
+
+    .totalMembersContent p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .lastYear img {
+        width: 25%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .graphlin {
+        height: 135px;
+    }
+}  */
+
+
+
+
+
+@media (max-width: 1350px) { 
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 880px;
+    }
+
+    .sale_report {
+        flex-direction: column;
+    }
+
+    .sale_report, .totalMembers, .lastSales {
+        max-width: 554px;
+        min-width: 554px;
+    }
+
+    .graphAndtitle p {
+        margin-bottom: 17px;
+    }
+
+    .report_title {
+        text-align: center;
+    }
+
+    .details {
+        justify-content: center;
+        display: flex;
+    }
+
+    .title_details {
+        padding-right: 17px;
+    }
+
+    .centerDetailCard {
+        margin-left: 17px;
+        margin-right: 17px;
+    }
+
+    .graph {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 17px;
+    }
+
+    .totalMembersContent p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1270px) { 
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 780px;
+    }
+
+    .card {
+        width: 248px;
+    }   
+
+    .sale_report, .totalMembers, .lastSales {
+        max-width: 454px;
+        min-width: 454px;
+    }
+
+    .graphAndtitle  {
+        margin-right: 16px;
+    }
+
+    .totalMembersContent p {
+        font-size: 14px;
+    }
+
+    .lastYear {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .graphlin {
+        height: 210px;
+    }
+
+    .lastSalesTitiles p {
+        margin-top: 0;
+        margin-bottom: 48px;
+    }
+}
+
+@media (max-width: 1150px) { 
+    .leftMenu {
+        width: 260px;
+        justify-content: space-around;
+    }
+
+    .header {
+        margin-left: 260px;
+    }
+
+    .menu {
+        margin-top: 0;
+    }
+
+    .mainPart {
+        margin-left: 260px;
+    }
+
+    .hreflogo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hreflogo .logo {
+        width: 80%;
+        padding-top: 0;
+    }
+}   
+
+@media (max-width: 1070px) { 
+    .leftMenu {
+        width: 220px;
+    }
+
+    .header {
+        margin-left: 220px;
+    }
+
+    .mainPart {
+        margin-left: 220px;
+    }
+
+    .hreflogo .logo {
+        padding-top: 40px;
+    }
+}   
+
+@media (max-width: 1020px) { 
+
+    .leftMenu {
+        width: 280px;
+    }
+
+    .header {
+        margin-left: 280px;
+    }
+
+    .mainPart {
+        margin-left: 280px;
+    }
+
+    .menu p {
+        font-size: 16px;
+    }
+
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 600px;
+    }
+
+    .topSeller {
+        flex-direction: column;
+    } 
+
+    .title {
+        position: relative;
+        text-align: center;
+    }
+
+    .mainCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sale_report, .totalMembers, .lastSales {
+        margin-bottom: 60px;
+    }
+
+    .mainCards {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+} 
+
+@media (max-width: 900px) { 
+    .topSeller, .headerContent, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 460px;
+    }
+}
+
+@media (max-width: 768px) { 
+    .topSeller, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 550px;
+    }
+    
+    .headerContent {
+        width: 100%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .header {
+        display: flex;
+    }
+
+    .headerMenu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 80px;
+    }
+
+    .header {
+        margin-left: 0;
+    }
+
+    .mainPart {
+        margin-left: 0;
+    }
+
+    .iconMenu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .butMenu {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .butMenu p {
+        display: none;
+    }
+    
+    .MainheaderMenu {
+        display: flex;
+    }
+
+    .leftMenu {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) { 
+    .topSeller, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 400px;
+    }
+} 
+
+@media (max-width: 518px) { 
+    .iconMenu {
+        width: 30%;
+    }
+} 
+
+@media (max-width: 460px) { 
+    .topSeller, .sale_report-yearly_sales, .totalMembers-Messages, .lastSales_topSeller {
+        width: 278px;
+    }
+
+    .header input {
+        width: 200px;
+    }
+
+    .sale_report, .totalMembers, .lastSales, .yearly_sales, .messages, .lastTopSeller {
+        max-width: 360px;
+        min-width: 360px;
+    }
+
+    .lastYear img {
+        width: 25%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .graphlin {
+        height: 180px;
+    }
+
+    .graph {
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    .details {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .title_details {
+        padding-right: 0;
+    }
+
+    .detailCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .detailCard p {
+        margin: 0;
+    }
+
+    .totalMembersContent p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .lastYear {
+        margin-left: 10px;
+        margin-right: 10px;
+    } 
+
+    .totalMembersContent {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .lastSalesTitiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lastSalesTitiles p {
+        margin-bottom: 10px;
+    }
+} 
