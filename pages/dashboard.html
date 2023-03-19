@@ -65,7 +65,9 @@
             </div>
         </div>
     </div>
+    <!-- верхнее меню(скрытое до определенных размеров экрана) -->
     <div class="MainheaderMenu">
+        <!-- меню взятое из блока бокового меню -->
         <div class="menu headerMenu">
             <!-- кнопки, прописанные через a с иконками -->
             <a href="#Dashboard" class="butMenu">
@@ -107,12 +109,15 @@
             <!-- три основные карточки -->
             <div class="mainCards">
                 <div class="mainCard">
+                    <!-- заголовок(место) -->
                     <p class="place">1</p>
+                    <!-- основная часть карточки -->
                     <div class="card">
                         <img src="../images/cardImg_1.svg" alt="cardimg">
                         <p class="cardName">Gear IconX</p>
                         <p class="cardDiscr">Amazing headphones</p>
                     </div>
+                    <!-- продажи -->
                     <p class="sales first_sales">over 100,000 sales</p>
                 </div>
                 <div class="mainCard">
@@ -313,55 +318,52 @@
         <div class="lastSales_topSeller">
             <!-- блок lastSales -->
             <div class="lastSales">
-                <!-- заголовки и график -->
-                <div class="titlesAndGraph">
-                    <!-- заголовки - flex -->
-                    <div class="lastSalesTitiles">
-                        <p>Timeline</p>
-                        <p>Last sales</p>
-                    </div>
-                    <!-- линейный график -->
-                    <div class="graphlin">
-                        <!-- основной блок графика -->
-                        <canvas id="myChart1"></canvas>
+                <!-- заголовки - flex -->
+                <div class="lastSalesTitiles">
+                    <p>Timeline</p>
+                    <p>Last sales</p>
+                </div>
+                <!-- линейный график -->
+                <div class="graphlin">
+                    <!-- основной блок графика -->
+                    <canvas id="myChart1"></canvas>
 
-                        <!-- основной скрипт графика -->
-                        <script>
-                            const ctxLine = document.getElementById('myChart1');
-                        
-                            new Chart(ctxLine, {
-                                data: {
-                                datasets:[{
-                                        type: 'line',
-                                        label: 'Last 6 days',
-                                        data: [1.1, 0.7, 1, 1.6, 2, 2.5],
-                                        backgroundColor: ["#37C61F"],
-                                        fill: false,
-                                        borderColor: '#37C61F',
-                                        tension: 0.1,
-                                    },
-                                    {
-                                        type: 'line',
-                                        label: 'Last month',
-                                        data: [1.4, 2, 0.5, 1, 1.8, 1.6],
-                                        backgroundColor: ["#3E3978"],
-                                        fill: false,
-                                        borderColor: '#766CE8',
-                                        tension: 0.1,
-                                    }],
-                                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                    <!-- основной скрипт графика -->
+                    <script>
+                        const ctxLine = document.getElementById('myChart1');
+                    
+                        new Chart(ctxLine, {
+                            data: {
+                            datasets:[{
+                                    type: 'line',
+                                    label: 'Last 6 days',
+                                    data: [1.1, 0.7, 1, 1.6, 2, 2.5],
+                                    backgroundColor: ["#37C61F"],
+                                    fill: false,
+                                    borderColor: '#37C61F',
+                                    tension: 0.1,
                                 },
-                                options: {
-                                    responsive: false,
-                                    scales: {
-                                        y: {
-                                            beginAtZero: true
-                                        }
+                                {
+                                    type: 'line',
+                                    label: 'Last month',
+                                    data: [1.4, 2, 0.5, 1, 1.8, 1.6],
+                                    backgroundColor: ["#3E3978"],
+                                    fill: false,
+                                    borderColor: '#766CE8',
+                                    tension: 0.1,
+                                }],
+                                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                            },
+                            options: {
+                                responsive: false,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
                                     }
                                 }
-                            });
-                        </script>
-                    </div>
+                            }
+                        });
+                    </script>
                 </div>
             </div>
 
@@ -409,6 +411,7 @@
             </div>
         </div>
     </div>
+    <!-- блок футера с логотипом -->
     <div class="footer header">
         <a href="#" class="hrefFooterLogo"><img class="footerLogo" src="../images/Logo.svg" alt="logo"></a>
     </div>
