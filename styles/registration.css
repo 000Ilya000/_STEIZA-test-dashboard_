@@ -242,7 +242,16 @@ a {
         margin-left: 10px;
     }
 
-    .form__field_data:focus {
+    .form__group {
         width: 280px;
+        height: 60px;
     }
+
+    /* .form__field_data:placeholder-shown ~ .form__label {
+        display: none;
+    } */
+
+    /* .form__field_data:focus ~ .form__label {
+        display: none;
+    } */
 }
