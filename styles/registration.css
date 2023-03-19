@@ -243,8 +243,11 @@ a {
     }
 
     .form__group {
-        width: 280px;
         height: 60px;
+    }
+
+    .form__field_data {
+        width: 280px;
     }
 
     /* .form__field_data:placeholder-shown ~ .form__label {
