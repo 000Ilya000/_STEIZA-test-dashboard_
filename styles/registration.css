@@ -253,10 +253,4 @@ a {
     .form__field_data:focus {
         width: 280px;
     }
-
-    .form__field_data::-webkit-date-and-time-value { 
-        text-align:left; 
-        margin-left: 24px;
-        margin-top: 28px;
-    }
 }
