@@ -247,6 +247,11 @@ a {
     }
 
     .form__field_data {
+        /* width: 100%; */
+        width: 280px;
+    }
+
+    .form__field_data:focus {
         width: 280px;
     }
 
